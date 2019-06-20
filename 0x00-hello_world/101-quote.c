@@ -11,7 +11,7 @@
 int main(void)
 {
 
-	int quote;
+	int q;
 
 	q = sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 
