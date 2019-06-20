@@ -33,7 +33,7 @@ int main(void)
 
 	if (n < 6 && n != 0)
 	{
-	printf("Last digit of %d is %d and is less than 6 and 0\n", n, last);
+	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last);
 	}
 	return (0);
 }
