@@ -1,20 +1,19 @@
 #include "holberton.h"
 
 /**
-* main - main function displays the alphabet in lowercase using putchar
+* print_alphabet - function displays the alphabet in lowercase using putchar
 *
 * Return: 0
 */
 
-int main(void)
+void print_alphabet(void)
 {
 	char displayAlphabet;
 
 	for (displayAlphabet = 'a'; displayAlphabet <= 'z'; displayAlphabet++)
 	{
-	putchar(displayAlphabet);
+		_putchar(displayAlphabet);
 	}
 
-	putchar('\n');
-	return (0);
+	_putchar('\n');
 }
