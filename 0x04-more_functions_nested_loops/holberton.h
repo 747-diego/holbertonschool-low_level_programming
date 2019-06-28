@@ -1,6 +1,9 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
+/* libraries */
+
+#include <stdio.h>
 
 /* Prototypes below */
 
