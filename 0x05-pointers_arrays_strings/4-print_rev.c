@@ -3,7 +3,7 @@
 /**
 * print_rev - function that prints a string, in reverse, followed by a new line
 * @s: name of array
-* Return: void
+* Return: Void
 */
 
 

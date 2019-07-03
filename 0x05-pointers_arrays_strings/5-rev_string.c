@@ -10,10 +10,14 @@ void rev_string(char *s)
 
 
 {
-	int index;
+
+
+	int length;
 	int counter;
 	int loop;
 	int temp;
+
+
 
 	counter = -1;
 
