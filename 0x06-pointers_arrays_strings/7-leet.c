@@ -2,54 +2,46 @@
 
 
 /**
- * leet - a function that encodes a string into 1337
+ * *leet - a function that encodes a string into 1337
  * @ptr: pointer
- * Returns: ptr
+ * Return: ptr
 */
-
 
 char *leet(char *ptr)
 
 {
 
-	int iterate;
 
+	int iterateS1;
+	int iterateS2;
+	int placeholder;
+	char letters[] = "oOlLeEaAtT";
+	char numbers[] = "0011334477";
 
-	for (iterate = 0; ptr[iterate] != '\0'; iterate++)
+	iterateS1 = 0;
+
+	while (ptr[iterateS1] != '\0')
 
 	{
+		iterateS2 = 0;
+		placeholder = 0;
 
-		if (ptr[iterate] == 'a' || ptr[iterate] == 'A')
-
-		{
-			ptr[iterate] = '4';
-		}
-
-		else if (ptr[iterate] == 'e' || ptr[iterate] == 'E')
+		while (letters[iterateS2] != '\0')
 
 		{
-			ptr[iterate] = '3';
+
+			if (ptr[iterateS1] == letters[iterateS2])
+
+			{
+				placeholder = iterateS2;
+				ptr[iterateS1] = numbers[placeholder];
+			}
+
+			iterateS2++;
 		}
 
-		else if (ptr[iterate] == 'o' || ptr[iterate] == 'O')
-
-		{
-			ptr[iterate] = '0';
-		}
-
-		else if (ptr[iterate] == 't' || ptr[iterate] == 'T')
-
-		{
-			ptr[iterate] = '7';
-		}
-
-		else if (ptr[iterate] == 'l' || ptr[iterate] == 'L')
-
-		{
-			ptr[iterate] = '1';
-		}
+		iterateS1++;
 	}
 
 	return (ptr);
 }
-

@@ -3,41 +3,42 @@
 
 /**
  * cap_string - function that capitalizes all words of a string
- * @p: pointer argumnet
+ * @ptr: pointer argumnet
  * Return: pointer
  */
 
-char *cap_string(char *p)
+char *cap_string(char *ptr)
 {
 	int iterate = 0;
 
 
-	while (p[iterate] != '\0')
+	while (ptr[iterate] != '\0')
 
 	{
 
-	if (iterate == 0 && p[iterate] >= 97 && p[iterate] <= 122)
+		if (iterate == 0 && ptr[iterate] >= 97 && ptr[iterate] <= 122)
 
 		{
-			p[iterate] = p[iterate] - 32;
+			ptr[iterate] = ptr[iterate] - 32;
 
 		}
 
-	if (p[iterate] >= 97 && p[iterate] <= 12
-	&& (p[iterate - 1] == 32 || p[iterate - 1] == ','
-	|| p[iterate - 1] == ';'|| p[iterate - 1] == ','
-	|| p[iterate - 1] == '!'|| p[iterate - 1] == '?'
-	|| p[iterate - 1] == '"'|| p[iterate - 1] == '('
-	|| p[iterate - 1] == ')'|| p[iterate - 1] == '{'
-	|| p[iterate - 1] == '}'|| p[iterate - 1] == '\n'
-	|| p[iterate - 1] == '\t'))
+		if (ptr[iterate] >= 97 && ptr[iterate] <= 12
+
+	&& (ptr[iterate - 1] == 32 || ptr[iterate - 1] == ','
+	|| ptr[iterate - 1] == ';' || ptr[iterate - 1] == ','
+	|| ptr[iterate - 1] == '!' || ptr[iterate - 1] == '?'
+	|| ptr[iterate - 1] == '"' || ptr[iterate - 1] == '('
+	|| ptr[iterate - 1] == ')' || ptr[iterate - 1] == '{'
+	|| ptr[iterate - 1] == '}' || ptr[iterate - 1] == '\n'
+	|| ptr[iterate - 1] == '\t'))
 
 		{
-			p[iterate] = p[iterate] - 32;
+			ptr[iterate] = ptr[iterate] - 32;
 		}
 
 			iterate++;
 	}
 
-	return(p);
+	return (ptr);
 }

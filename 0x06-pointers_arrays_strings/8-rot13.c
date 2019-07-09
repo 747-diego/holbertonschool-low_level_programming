@@ -7,34 +7,36 @@
  * Return: pointer
  */
 
-char *rot13(char *s)
+char *rot13(char *ptr)
 
 {
 	int iterate = 0;
 
 
-	while (s[iterate] != '\0')
+	while (ptr[iterate] != '\0')
 
 	{
 
-		if ((s[iterate] >= 'a' && s[iterate] <= 'm') || (s[iterate] >= 'A' && s[iterate] <= 'M'))
+		if ((ptr[iterate] >= 'a' && ptr[iterate] <= 'm') ||
+		(ptr[iterate] >= 'A' && ptr[iterate] <= 'M'))
 
 		{
-			s[iterate] = (s[iterate] + 13);
+			ptr[iterate] = (ptr[iterate] + 13);
 		}
 
 		else
 
 
-			while ((s[iterate] >= 'n' && s[iterate] <= 'z') || (s[iterate] >= 'N' && s[iterate] <= 'Z'))
+			while ((ptr[iterate] >= 'n' && ptr[iterate] <= 'z') ||
+			 (ptr[iterate] >= 'N' && ptr[iterate] <= 'Z'))
 
 			{
-				s[iterate] = (s[iterate] - 13);
+				ptr[iterate] = (ptr[iterate] - 13);
 			}
 
 
 		iterate++;
 	}
 
-	return (s);
+	return (ptr);
 }
