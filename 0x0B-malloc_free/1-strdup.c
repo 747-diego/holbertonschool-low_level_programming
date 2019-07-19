@@ -29,7 +29,7 @@ char *_strdup(char *str)
 	}
 
 
-	originalString = malloc(length * sizeof(str));
+	originalString = malloc(length * sizeof(str + 1));
 
 
 	if (originalString == NULL)
@@ -48,3 +48,6 @@ char *_strdup(char *str)
 
 		return (originalString);
 }
+
+
+
