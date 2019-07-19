@@ -1,6 +1,7 @@
 #include "holberton.h"
 
 /**
+* _calloc - a function that allocates memory for an array, using malloc
 * @nmemb: number of elemnents to be allocated
 * @size: the size of elements
 * Return: pointer to the allocated memory, or NULL if the request fails
