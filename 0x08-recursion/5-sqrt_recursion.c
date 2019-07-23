@@ -34,11 +34,13 @@ int _sqrt_recursion(int n)
 	}
 }
 
+
+
 /**
  * helper - blank
- * @n: number
- * @i: incrementor
- * Return: -1;
+ * @n:  natural squre root
+ * @i:  my counter
+ * Return: -1
  */
 
 int helper(int n, int i)
@@ -46,16 +48,19 @@ int helper(int n, int i)
 {
 
 	if (n == (i * i))
+
 	{
 		return (i);
 	}
 
 	else if (n > (i * i))
+
 	{
 		return (helper(n, i + 1));
 	}
 
 	else
+
 	{
 		return (-1);
 	}
