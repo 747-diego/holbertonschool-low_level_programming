@@ -18,6 +18,8 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	if (size == 0 || action == NULL)
 		return;
 
+	if (array == NULL)
+		return;
 	executer = action;
 	iterate = 0;
 
