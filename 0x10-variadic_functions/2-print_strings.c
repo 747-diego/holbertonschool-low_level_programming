@@ -11,9 +11,9 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 
+	va_list vl; /* variadic list variables */
 	char *pointerCH;
 	unsigned int iterate;
-	va_list vl; /* variadic list variables */
 
 	va_start(vl, n); /* initialize and use variables */
 
