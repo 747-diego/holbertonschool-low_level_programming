@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
-* print_string -  a function that prints numbers, followed by a new line
+* print_numbers -  a function that prints numbers, followed by a new line
 * @separator: is the string to be printed between numbers
 * @n: is the number of integers passed to the function
 * @...: the numbers being printed
