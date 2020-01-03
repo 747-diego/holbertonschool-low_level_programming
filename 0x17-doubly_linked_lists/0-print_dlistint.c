@@ -12,7 +12,8 @@ size_t print_dlistint(const dlistint_t *h)
 
     for (index = 0; h != NULL; index++, h = h->next)
     {
-        // h = h->next;
+        /* h = h->next; index pointer of nodes must be
+        inside FOR loop */
         printf("%d\n", h->n);
     }
 
