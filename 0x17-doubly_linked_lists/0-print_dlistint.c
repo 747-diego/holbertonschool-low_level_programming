@@ -4,11 +4,12 @@
  * print_dlistint - a function that prints all the
  * elements of a doublylinked list
  * @h: head pointer points at 1st node
- * Return: # of nodes
+ * Return: num of nodes
  */
 
 size_t print_dlistint(const dlistint_t *h)
 {
+
 	int index;
 
     for (index = 0; h != NULL; index++, h = h->next)
