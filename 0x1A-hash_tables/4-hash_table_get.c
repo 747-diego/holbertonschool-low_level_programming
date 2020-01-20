@@ -9,7 +9,7 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int KeyIndex;
-    hash_node_t *HashcodeIndex;
+	hash_node_t *HashcodeIndex;
 
 	if (ht == NULL || key == NULL)
 		return (NULL);
