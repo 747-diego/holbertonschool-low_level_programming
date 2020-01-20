@@ -11,12 +11,12 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int iteratation;
 
-    for (iteratation = 0; head != NULL; iteratation++)
+	for (iteratation = 0; head != NULL; iteratation++)
 	{
 		if (iteratation == index)
-        {
-    		return (head);
-        }
+		{
+    			return (head);
+		}
 		head = head->next;
 	}
 
