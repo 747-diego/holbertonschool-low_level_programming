@@ -6,28 +6,24 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	char *KeyIndex;
-	char *ValueIndex;
+	char *KeyIndex, *ValueIndex;
 	unsigned int Head = 1;
 	unsigned long int iteration = 0;
 	hash_node_t *NextNode;
 
 	if (ht)
-
 	{
-
 		putchar('{');
-
 		while (iteration < ht->size)
 		{
 			if (ht->array[iteration] == NULL)
-			iteration++;
-
+            iteration++;
 			else
 			{
 				if (Head == 1)
 				{
-					printf("'%s': '%s'", ht->array[iteration]->key, ht->array[iteration]->value);
+					printf("'%s': '%s'", ht->array[iteration]->key,
+                     ht->array[iteration]->value);
 					Head = 0;
 				}
 				else
@@ -36,18 +32,15 @@ void hash_table_print(const hash_table_t *ht)
 					ValueIndex = ht->array[iteration]->value;
 					printf(", '%s': '%s'", KeyIndex, ValueIndex);
 					NextNode = ht->array[iteration] = ht->array[iteration]->next;
-
 					while (NextNode)
 					{
 						printf(", '%s': '%s'", KeyIndex, ValueIndex);
 						ht->array[iteration] = ht->array[iteration]->next;
 					}
 				}
-
 			iteration++;
 			}
 		}
-
 		putchar('}');
 		putchar('\n');
 	}
