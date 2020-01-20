@@ -6,49 +6,49 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-    char *KeyIndex;
-    char *ValueIndex;
+	char *KeyIndex;
+	char *ValueIndex;
 	unsigned int Head = 1;
-    unsigned long int iteration = 0;
-    hash_node_t *NextNode;
+	unsigned long int iteration = 0;
+	hash_node_t *NextNode;
 
 	if (ht)
 
-    {
+	{
 
-        putchar('{');
+		putchar('{');
 
-        while (iteration < ht->size)
-        {
-            if (ht->array[iteration] == NULL)
-                iteration++;
+		while (iteration < ht->size)
+		{
+			if (ht->array[iteration] == NULL)
+			iteration++;
 
-            else
+			else
+			{
+				if (Head == 1)
+				{
+					printf("'%s': '%s'", ht->array[iteration]->key, ht->array[iteration]->value);
+					Head = 0;
+				}
+				else
+				{
+					KeyIndex = ht->array[iteration]->key;
+					ValueIndex = ht->array[iteration]->value;
+					printf(", '%s': '%s'", KeyIndex, ValueIndex);
+					NextNode = ht->array[iteration] = ht->array[iteration]->next;
 
-            {
-                if (Head == 1)
-                {
-                    printf("'%s': '%s'", ht->array[iteration]->key, ht->array[iteration]->value);
-                    Head = 0;
-                }
-                else
-                {
-                    KeyIndex = ht->array[iteration]->key;
-                    ValueIndex = ht->array[iteration]->value;
-                    printf(", '%s': '%s'", KeyIndex, ValueIndex);
-                    NextNode = ht->array[iteration] = ht->array[iteration]->next;
-                    while (NextNode)
-                    {
-                        printf(", '%s': '%s'", KeyIndex, ValueIndex);
-                        ht->array[iteration] = ht->array[iteration]->next;
-                    }
-                }
+					while (NextNode)
+					{
+						printf(", '%s': '%s'", KeyIndex, ValueIndex);
+						ht->array[iteration] = ht->array[iteration]->next;
+					}
+				}
 
-                iteration++;
-            }
-        }
+			iteration++;
+			}
+		}
 
-        putchar('}');
-        putchar('\n');
-    }
+		putchar('}');
+		putchar('\n');
+	}
 }
