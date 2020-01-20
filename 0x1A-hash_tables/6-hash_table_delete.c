@@ -10,8 +10,10 @@ void hash_table_delete(hash_table_t *ht)
 	hash_node_t *CurrentNode;
 	hash_node_t *NextNode;
 	hash_node_t **Array;
+    
 	unsigned int long TableSize = 0;
 	unsigned int long index = 0;
+
 
 	TableSize = ht->size;
 	while (index < TableSize)
