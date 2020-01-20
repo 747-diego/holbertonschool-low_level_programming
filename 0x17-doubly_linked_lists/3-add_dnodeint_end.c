@@ -8,8 +8,9 @@
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *holder = *head;
-    dlistint_t *EndNode;
-    /* checking for empty list */
+	dlistint_t *EndNode;
+
+	/* checking for empty list */
 	if (head == NULL)
 	{
 		return (NULL);
