@@ -1,0 +1,18 @@
+# -*- Makefile -*-
+
+# Compile an executable named holberton from holberton.c 
+# by using variables -> CC & SRC & NAME & OBJ
+# FORMAT:
+# all: NAME
+# NAME: OBJ
+# CC SRC -o yourProgram 
+
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:%.c=%.o)
+NAME = holberton
+
+all: $(NAME)
+
+$(NAME): $(OBJ) m.h
+	$(CC) $(OBJ) -o $(NAME)
