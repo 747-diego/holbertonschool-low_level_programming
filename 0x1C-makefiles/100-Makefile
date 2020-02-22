@@ -1,0 +1,31 @@
+# -*- Makefile -*-
+
+# Compile an executable named holberton from holberton.c 
+# by using variables -> CC & SRC & NAME & OBJ & RM
+# You have to use $(RM) for the cleaning up rules
+# but you are not allowed to set the RM variable
+# FORMAT:
+# all: NAME
+# NAME: OBJ
+# CC SRC -o yourProgram 
+
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:%.c=%.o)
+NAME = holberton
+CFLAGS = -Wall -Werror -Wextra -pedantic
+HEADER = m.h
+
+all: $(HEADER)
+
+$(NAME): $(OBJ) $(HEADER)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+clean:
+		$(RM) -f *~ $(NAME)
+oclean:
+		$(RM) -f $(OBJ)
+fclean:
+		$(RM) -f *~ $(NAME)
+		$(RM) -f $(OBJ)
+re: oclean all
