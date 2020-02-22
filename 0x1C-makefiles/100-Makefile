@@ -1,14 +1,5 @@
 # -*- Makefile -*-
 
-# Compile an executable named holberton from holberton.c 
-# by using variables -> CC & SRC & NAME & OBJ & RM
-# You have to use rm for the cleaning up rules
-# but you are not allowed to set the RM variable
-# FORMAT:
-# all: NAME
-# NAME: OBJ
-# CC SRC -o yourProgram 
-
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC = main.c holberton.c
@@ -24,4 +15,4 @@ clean:
 oclean:
 	$(RM) $(OBJ)
 fclean: clean oclean
-re: oclean all
+re: oclean $(OBJ) all
