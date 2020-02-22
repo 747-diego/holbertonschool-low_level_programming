@@ -2,7 +2,7 @@
 
 # Compile an executable named holberton from holberton.c 
 # by using variables -> CC & SRC & NAME & OBJ & RM
-# You have to use $(RM) for the cleaning up rules
+# You have to use rm for the cleaning up rules
 # but you are not allowed to set the RM variable
 # FORMAT:
 # all: NAME
