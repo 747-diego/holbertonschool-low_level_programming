@@ -17,7 +17,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 .PHONY: all clean oclean fclean re
 HEADER = m.h
 
-all: $(HEADER)
+all: $(HEADER) $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
