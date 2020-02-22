@@ -17,8 +17,6 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 HEADER = m.h
 
 all: $(HEADER)
-
-$(NAME): $(OBJ) $(HEADER)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
