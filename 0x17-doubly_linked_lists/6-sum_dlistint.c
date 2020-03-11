@@ -9,7 +9,7 @@
 int sum_dlistint(dlistint_t *head)
 {
 	int Sum = 0;
-    dlistint_t *holder = *head;
+    dlistint_t *holder = head;
 
 	while (holder)
 	{
