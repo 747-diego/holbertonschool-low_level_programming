@@ -41,15 +41,15 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			temp->next = dnode->next;
 
 			if (temp->next)
-            {
+			{
 				temp->next->prev = temp;
-            }
+			}
 
-            free(dnode);
+			free(dnode);
 			return (1);
 		}
-    iterator++;
-    temp = temp->next;
-    }
+	iterator++;
+	temp = temp->next;
+	}
 	return (-1);
 }
