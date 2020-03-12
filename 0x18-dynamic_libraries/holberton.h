@@ -1,5 +1,6 @@
 #ifndef __HOLBERTON_HEADER__
 #define __HOLBERTON_HEADER__
+#include <stdlib.h>
 
 int _putchar(char c);
 int _islower(int c);
