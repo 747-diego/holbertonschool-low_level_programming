@@ -11,13 +11,12 @@
 
 int linear_search(int *array, size_t size, int value)
 {
-	size_t index;
+	size_t index = 0;
 
 	/* Checking if array is empty */
 	if (array == NULL)
 		return (-1);
 
-	index = 0;
 	while ( index < size )
 	{
 		printf("Value checked array[%zu] = [%d]\n", index, array[index]);
